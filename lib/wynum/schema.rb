@@ -1,5 +1,5 @@
 class Schema
-  attr_reader :key, :value
+  attr_reader :key, :type
 
   def initialize(schema_hash)
     @key = schema_hash["Property"]
@@ -7,10 +7,10 @@ class Schema
   end
 
   def to_s
-    puts "key: #{@key}, value: #{@type}"
+    puts "key: #{@key}, type: #{@type}"
   end
 
   def to_str
-    puts "key: #{@key}, value: #{@type}"
+    puts "key: #{@key}, type: #{@type}"
   end
 end
