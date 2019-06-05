@@ -13,6 +13,10 @@ class Client
     @schema_url = "https://api.wynum.com/component/#{@token}"
   end
 
+  def get_data
+    raise NotImplementedError
+  end
+
   def get_schema
     resposne = RestClient.get @schema_url
     resposne_parsed = JSON.parse resposne.body
