@@ -16,7 +16,7 @@ class Client
   def get_schema
     resposne = RestClient.get @schema_url
     resposne_parsed = JSON.parse resposne.body
-    @identifier = resposne_parsed["identifier"]
+    @identifier = resposne_parsed["identifer"]
     components = resposne_parsed["components"]
     schemas = components.map { |c| Schema.new c }
     return schemas
